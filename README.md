@@ -1,3 +1,5 @@
+![](https://github.com/YNVSolutions/Swift_Cause_IOS/blob/main/banner.png)
+
 # 📱 Swift Cause – iOS App
 
 **Swift Cause** is a modern, open source mobile donation platform built for nonprofits. This iOS app empowers organizations and their supporters to manage and contribute to fundraising campaigns on the go. Developed using **Kotlin Multiplatform Mobile (KMM)**, it combines shared business logic with a native SwiftUI interface for a fast, secure, and intuitive experience.
