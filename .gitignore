@@ -1,0 +1,60 @@
+# Xcode
+.DS_Store
+*.xcodeproj
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcstickers/
+!*.xcassets/
+*.xcuserdatad/
+*.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+!*.xcworkspace/xcshareddata/
+
+# Build products
+Build/
+build/
+DerivedData/
+
+# Swift Package Manager (SPM)
+.swiftpm/
+Package.resolved
+Package.swift.lock
+
+# Pods (CocoaPods)
+Pods/
+!Podfile.lock
+
+# Carthage
+Carthage/
+
+# fastlane
+fastlane/report.xml
+fastlane/screenshots/
+fastlane/test_output/
+
+# User-specific
+*.bak
+*.orig
+*.swp
+*.swo
+*.o
+*.d
+*.gcno
+*.gcda
+*.gch
+*.xccheckout
+*.xcscmblueprint
+*.app
+*.ipa
+*.dsym
+*.xcuserstate
+*.moved-aside
+xcuserdata/
+
+# SwiftLint
+.swiftlint.yml
+
+# Other common files
+.localized
+.vagrant/
+.bundle/
