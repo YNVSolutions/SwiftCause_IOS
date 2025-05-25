@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Swift_Cause_IOS
-//
-//  Created by Yash Raghuvanshi.
-//
-
 import SwiftUI
 
 struct ContentView: View {
