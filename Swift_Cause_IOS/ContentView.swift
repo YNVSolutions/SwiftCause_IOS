@@ -38,7 +38,24 @@ struct ContentView: View {
                     .padding(.bottom, 50)
 
         
-                
+                Button(action: {
+                   
+                    print("Get Started!")
+                }) {
+                    Text("Get Started")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding(.vertical, 15)
+                        .padding(.horizontal, 40)
+                        .background(
+                            Capsule()
+                                .fill(Color.blue)
+                                .shadow(radius: 5)
+                        )
+                }
+                .padding(.bottom, 50)
+
+                Spacer()
             }
             .padding()
         }
