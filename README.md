@@ -54,9 +54,9 @@
 ## 📦 Installation
 
 > **Prerequisites**
-- Xcode 14+
-- Kotlin 1.9+
-- Cocoapods (for Firebase & Stripe SDK integration)
+- ![Xcode](https://img.shields.io/badge/Xcode-14%2B-blue)
+- ![Kotlin](https://img.shields.io/badge/Kotlin-1.9%2B-F0B300)
+- ![Cocoapods](https://img.shields.io/badge/Cocoapods-Firebase%20%26%20Stripe%20SDKs-lightgrey)
 
 ```bash
 git clone https://github.com/your-org/swift-cause-ios.git
