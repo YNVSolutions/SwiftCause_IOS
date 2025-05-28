@@ -1,5 +1,4 @@
 name: Swift Cause iOS CI
-description: CI workflow for Swift Cause iOS app to build and run tests on every push or pull request.
 
 on:
   push:
@@ -21,15 +20,10 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.2'
-
       - name: Build App
         run: |
           xcodebuild build \
-            -workspace Swift_Cause_IOS.xcworkspace \
+            -project Swift_Cause_IOS.xcodeproj \
             -scheme Swift_Cause_IOS \
             -destination 'platform=iOS Simulator,name=iPhone 15 Pro' \
             clean build
@@ -37,7 +31,7 @@ jobs:
       - name: Run Tests
         run: |
           xcodebuild test \
-            -workspace Swift_Cause_IOS.xcworkspace \
+            -project Swift_Cause_IOS.xcodeproj \
             -scheme Swift_Cause_IOS \
             -destination 'platform=iOS Simulator,name=iPhone 15 Pro' \
             -enableCodeCoverage YES
