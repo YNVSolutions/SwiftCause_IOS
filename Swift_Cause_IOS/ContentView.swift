@@ -43,7 +43,42 @@ struct ContentView: View {
                     .frame(width: 350 , height: 1)
                     .foregroundColor(.white)
                 
+                Button{
+                    //sign up
+                    register()
+                    
+                }label: {
+                    Text("Sign Up")
+                        .frame(width: 200,height: 40)
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10,style: .continuous)
+                                .fill(.linearGradient(colors: [
+                                    .green, .blue], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                )
+                        )
+                }
+                .padding(.top)
+                .offset(y:100)
                 
+                Button{
+                    //login
+                    login()
+                }label: {
+                    Text("Already have an account? Login")
+                        .bold()
+                        .foregroundColor(.white)
+                }
+                .padding(.top)
+                .offset(y:110)
+            }
+            .frame(width: 350)
+        }
+        .ignoresSafeArea()
+    }
+    
+    
 }
 
 #Preview {
