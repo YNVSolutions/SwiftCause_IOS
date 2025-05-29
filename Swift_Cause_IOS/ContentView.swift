@@ -78,6 +78,15 @@ struct ContentView: View {
         .ignoresSafeArea()
     }
     
+    func login(){
+        Auth.auth().createUser(withEmail: email, password: password){
+            result, error in
+            if error != nil{
+                print(error!.localizedDescription)
+            }
+        }
+    }
+    
     
 }
 
