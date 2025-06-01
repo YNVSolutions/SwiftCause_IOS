@@ -1,14 +1,17 @@
 platform :ios, '13.0'
 
-target 'Swift_Cause_IOS' do
+target 'SwiftCause_IOS' do
   use_frameworks!
 
-  # Firebase pods
   pod 'Firebase/Auth'
-
-  # FirebaseUI pods
   pod 'FirebaseUI/Auth'
-  pod 'FirebaseUI/Google'
-  pod 'FirebaseUI/OAuth'
-  pod 'FirebaseUI/Email'
+  pod 'FirebaseUI/Email' 
+
+  target 'SwiftCause_IOSTests' do
+    inherit! :search_paths
+  end
+
+  target 'SwiftCause_IOSUITests' do
+  end
 end
+
