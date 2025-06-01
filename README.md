@@ -7,7 +7,7 @@
 [![Issues Open](https://img.shields.io/github/issues/YNVSolutions/Swift_Cause_IOS.svg?style=flat-square)](https://github.com/YNVSolutions/Swift_Cause_IOS/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/YNVSolutions/Swift_Cause_IOS/pulls)
 
-**Swift Cause** is a modern, open source mobile donation platform built for nonprofits. This iOS app empowers organizations and their supporters to manage and contribute to fundraising campaigns on the go. Developed using **Kotlin Multiplatform Mobile (KMM)**, it combines shared business logic with a native SwiftUI interface for a fast, secure, and intuitive experience.
+**Swift Cause** is a modern, open source mobile donation platform built for nonprofits. This iOS app empowers organizations and their supporters to manage and contribute to fundraising campaigns on the go. Developed using Swift and SwiftUI, it combines shared business logic with a native interface for a fast, secure, and intuitive experience.
 
 > 🇬🇧 Initially designed for the UK market with Gift Aid support and GBP transactions, but built with global scalability in mind.
 
@@ -41,22 +41,23 @@
 
 | Component              | Technology |
 |------------------------|------------|
-| ![Kotlin](https://img.shields.io/badge/Kotlin-1.9-blueviolet?logo=kotlin&logoColor=white) | Shared business logic via **Kotlin Multiplatform Mobile** |
+| ![Swift](https://img.shields.io/badge/Swift-iOS-orange.svg?logo=swift) | Shared business logic via **Swift** |
 | ![SwiftUI](https://img.shields.io/badge/SwiftUI-iOS-orange?logo=swift&logoColor=white) | Native iOS interface |
 | ![Firebase](https://img.shields.io/badge/Firebase-Backend-yellow?logo=firebase&logoColor=white) | Authentication, Realtime Database, Cloud Functions |
 | ![Stripe](https://img.shields.io/badge/Stripe-Payments-635bff?logo=stripe&logoColor=white) | Secure mobile donation processing |
 | ![SumUp](https://img.shields.io/badge/SumUp-SDK-blue?logo=sumup&logoColor=white) | Mobile card payment integration |
 | ![Apple](https://img.shields.io/badge/Apple%20Pay-Supported-black?logo=applepay&logoColor=white) | Contactless donations |
 | ![CI/CD](https://img.shields.io/badge/Vercel%20&%20GitHub%20Actions-Deployment-black?logo=vercel&logoColor=white&label=CI%2FCD) | Automated deployment & previews |
+| ![Xcode](https://img.shields.io/badge/Xcode-15.0-blue.svg?logo=xcode) |Development platform |
 
 ---
 
 ## 📦 Installation
 
-> **Prerequisites**
 - ![Xcode](https://img.shields.io/badge/Xcode-14%2B-blue)
 - ![Kotlin](https://img.shields.io/badge/Kotlin-1.9%2B-F0B300)
 - ![Cocoapods](https://img.shields.io/badge/Cocoapods-Firebase%20%26%20Stripe%20SDKs-lightgrey)
+
 
 ```bash
 git clone https://github.com/your-org/swift-cause-ios.git
