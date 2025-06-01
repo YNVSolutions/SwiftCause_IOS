@@ -1,13 +1,13 @@
 //
-//  Swift_Cause_IOSUITestsLaunchTests.swift
-//  Swift_Cause_IOSUITests
+//  SwiftCause_IOSUITestsLaunchTests.swift
+//  SwiftCause_IOSUITests
 //
-//  Created by Yash Raghuvanshi on 20/05/25.
+//  Created by Yash Raghuvanshi on 01/06/25.
 //
 
 import XCTest
 
-final class Swift_Cause_IOSUITestsLaunchTests: XCTestCase {
+final class SwiftCause_IOSUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -1,13 +1,13 @@
 //
-//  Swift_Cause_IOSUITests.swift
-//  Swift_Cause_IOSUITests
+//  SwiftCause_IOSUITests.swift
+//  SwiftCause_IOSUITests
 //
-//  Created by Yash Raghuvanshi on 20/05/25.
+//  Created by Yash Raghuvanshi on 01/06/25.
 //
 
 import XCTest
 
-final class Swift_Cause_IOSUITests: XCTestCase {
+final class SwiftCause_IOSUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
