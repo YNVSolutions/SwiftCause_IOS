@@ -1,17 +1,15 @@
-//
-//  Swift_Cause_IOSApp.swift
-//  Swift_Cause_IOS
-//
-//  Created by Yash Raghuvanshi on 20/05/25.
-//
-
 import SwiftUI
+import Firebase
 
 @main
 struct Swift_Cause_IOSApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+    init() {
+            FirebaseApp.configure()
         }
-    }
+
+        var body: some Scene {
+            WindowGroup {
+                ContentView() 
+            }
+        }
 }

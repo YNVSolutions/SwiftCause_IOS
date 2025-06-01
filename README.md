@@ -1,6 +1,11 @@
 ![](https://github.com/YNVSolutions/Swift_Cause_IOS/blob/main/banner.png)
 
 # 📱 Swift Cause – iOS App
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=flat-square)](https://semver.org)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Last Commit](https://img.shields.io/github/last-commit/YNVSolutions/Swift_Cause_IOS.svg?style=flat-square)](https://github.com/YNVSolutions/Swift_Cause_IOS/commits/main)
+[![Issues Open](https://img.shields.io/github/issues/YNVSolutions/Swift_Cause_IOS.svg?style=flat-square)](https://github.com/YNVSolutions/Swift_Cause_IOS/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/YNVSolutions/Swift_Cause_IOS/pulls)
 
 **Swift Cause** is a modern, open source mobile donation platform built for nonprofits. This iOS app empowers organizations and their supporters to manage and contribute to fundraising campaigns on the go. Developed using Swift and SwiftUI, it combines shared business logic with a native interface for a fast, secure, and intuitive experience.
 
@@ -49,12 +54,32 @@
 
 ## 📦 Installation
 
-> **Prerequisites**
-- Xcode 14+
-- Cocoapods (for Firebase & Stripe SDK integration)
+- ![Xcode](https://img.shields.io/badge/Xcode-14%2B-blue)
+- ![Kotlin](https://img.shields.io/badge/Kotlin-1.9%2B-F0B300)
+- ![Cocoapods](https://img.shields.io/badge/Cocoapods-Firebase%20%26%20Stripe%20SDKs-lightgrey)
+
 
 ```bash
 git clone https://github.com/your-org/swift-cause-ios.git
 cd swift-cause-ios
 pod install
 open SwiftCause.xcworkspace
+```
+
+## Development Environment (Xcode)
+
+To develop and debug this application, you will primarily use Xcode.
+
+* **Debugging:** Xcode provides powerful debugging tools. Set breakpoints by clicking on the line numbers in the source editor. Run the app, and execution will pause at your breakpoints, allowing you to inspect variables, step through code, and more.
+* **Simulators:** Test your app on various iPhone and iPad simulators available in Xcode.
+* **Device Testing:** Connect your iOS device, and select it from the scheme dropdown to run and debug on a physical device.
+
+For more information on using Xcode, refer to the [official Apple Developer Documentation](https://developer.apple.com/documentation/xcode).
+
+---
+
+## Supported iOS Versions
+
+This application is developed to support iOS versions [e.g., iOS 15.0 and above]. For optimal performance and access to the latest features, it is recommended to run the app on the latest available iOS version.
+
+---
