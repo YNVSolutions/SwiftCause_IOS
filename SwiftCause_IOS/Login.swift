@@ -15,3 +15,6 @@ struct LoginView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {}
 }
 
+#Preview{
+    LoginView()
+}
