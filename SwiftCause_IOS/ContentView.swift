@@ -1,21 +1,28 @@
-//
-//  ContentView.swift
-//  SwiftCause_IOS
-//
-//  Created by Yash Raghuvanshi on 05/06/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            ZStack{
+                Color("main")
+                    .ignoresSafeArea()
+                VStack{
+                    Text("Swift Cause")
+                        .foregroundColor(.white)
+                        .font(.system(size: 30))
+                        .bold()
+                    NavigationLink(destination: Login()) {
+                        Text("Login Page")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                            .padding(.horizontal)
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
