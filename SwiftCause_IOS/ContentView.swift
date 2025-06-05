@@ -4,25 +4,32 @@ struct ContentView: View {
     @State private var showLogin = false
 
     var body: some View {
-            TabView{
-                    CampaignsView()
-                        .tabItem(){
-                            Image(systemName: "person.fill")
-                            Text("Campaigns")
-                        }
+        NavigationStack {
+            HStack {
+                
+                NavigationLink {
                     LoginView()
-                        .tabItem(){
-                            Image(systemName: "envelope")
-                            Text("Login")
-                        }
+                } label: {
+                    Text("Login Screen")
+                        .font(.headline)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                 }
-        ZStack{
-            VStack {
-                Text("Welcome to SwiftCause")
-                    .font(.largeTitle)
-                    .padding()
-
+                NavigationLink {
+                    CampaignsView()
+                } label: {
+                    Text("Campaigns Screen")
+                        .font(.headline)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                Spacer()
             }
+            .navigationTitle("Swift Cause")
         }
     }
 }
