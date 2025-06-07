@@ -5,7 +5,9 @@ struct Login: View {
     @State private var Email: String = ""
     @State private var Password: String = ""
     @State private var isLoggedIn: Bool = false
-    
+    @State private var showAlert: Bool = false
+    @State private var alertMessage: String = ""
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -15,7 +17,7 @@ struct Login: View {
                     Text("Sign In")
                         .foregroundColor(.white)
                         .font(.system(size: 40))
-                    
+
                     HStack {
                         Image(systemName: "envelope")
                             .foregroundColor(.gray)
@@ -28,7 +30,7 @@ struct Login: View {
                     .background(Color(.systemGray6))
                     .cornerRadius(10)
                     .padding(.horizontal)
-                    
+
                     HStack {
                         Image(systemName: "lock")
                             .foregroundColor(.gray)
@@ -40,10 +42,7 @@ struct Login: View {
                     .background(Color(.systemGray6))
                     .cornerRadius(10)
                     .padding(.horizontal)
-                    
-                    
-                    NavigationLink(destination: Campaign(), isActive: $isLoggedIn) { EmptyView() }
-                    
+
                     Button(action: {
                         signInUser()
                     }) {
@@ -58,14 +57,23 @@ struct Login: View {
                     }
                 }
             }
+            .navigationDestination(isPresented: $isLoggedIn) {
+                Campaign()
+            }
+            .alert("Login Error", isPresented: $showAlert) {
+                Button("OK") { }
+            } message: {
+                Text(alertMessage)
+            }
         }
     }
-    
-    //Sign-in
+
     private func signInUser() {
         Auth.auth().signIn(withEmail: Email, password: Password) { authResult, error in
             if let error = error {
                 print("Error signing in: \(error.localizedDescription)")
+                self.alertMessage = error.localizedDescription
+                self.showAlert = true
             } else {
                 print("User signed in successfully!")
                 isLoggedIn = true
