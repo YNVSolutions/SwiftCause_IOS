@@ -5,11 +5,17 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text("Welcome to SwiftCause")
+            
+            Text("welcome_message")
                 .font(.largeTitle)
                 .padding()
 
-            Button("Login") {
+            Text("current_campaigns")
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.bottom, 20)
+            
+            Button("login_button") {
                 showLogin = true
             }
             .font(.title2)
@@ -20,6 +26,7 @@ struct ContentView: View {
         }
     }
 }
-#Preview{
+
+#Preview {
     ContentView()
 }
