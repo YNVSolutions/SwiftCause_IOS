@@ -1,9 +1,3 @@
-//
-//  SwiftCause_IOSTests.swift
-//  SwiftCause_IOSTests
-//
-//  Created by Yash Raghuvanshi on 01/06/25.
-//
 
 import XCTest
 @testable import SwiftCause_IOS

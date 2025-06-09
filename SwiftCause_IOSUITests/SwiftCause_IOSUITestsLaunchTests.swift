@@ -1,9 +1,3 @@
-//
-//  SwiftCause_IOSUITestsLaunchTests.swift
-//  SwiftCause_IOSUITests
-//
-//  Created by Yash Raghuvanshi on 01/06/25.
-//
 
 import XCTest
 

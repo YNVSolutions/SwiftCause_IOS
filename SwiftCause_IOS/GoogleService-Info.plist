@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>373490483164-202e3f8e07vqb2d7gms5rbv36q77jhfi.apps.googleusercontent.com</string>
+	<string>373490483164-40ntl3rbkv7tpkrs5h0pqekbl7hve6ok.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.373490483164-202e3f8e07vqb2d7gms5rbv36q77jhfi</string>
+	<string>com.googleusercontent.apps.373490483164-40ntl3rbkv7tpkrs5h0pqekbl7hve6ok</string>
 	<key>ANDROID_CLIENT_ID</key>
 	<string>373490483164-iasudq8trgp4uid5fmr3n2b4pr118sde.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>YNVSolutions.SwiftCause-IOS</string>
+	<string>YNVSolutions.SwiftCause-iOS</string>
 	<key>PROJECT_ID</key>
 	<string>swiftcause-app</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:373490483164:ios:be9d2c155845f16e555919</string>
+	<string>1:373490483164:ios:0bac329d88c706d5555919</string>
 </dict>
 </plist>

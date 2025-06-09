@@ -1,6 +1,6 @@
 import SwiftUI
-import Firebase
-
+import FirebaseCore
+import FirebaseAuth
 @main
 struct SwiftCause_IOSApp: App {
     init() {
