@@ -16,16 +16,12 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
-
 //page1
 struct Main: View {
     var body: some View {
         VStack(spacing: 20) {
             VStack{
-                Text("Swift Cause")
+                Text("welcome_message")
                     .foregroundColor(.white)
                     .font(.system(size: 40))
                     .bold()
@@ -55,7 +51,7 @@ struct Main: View {
                 }
                 .padding(.vertical,40)
                 NavigationLink(destination: Login()) {
-                    Text("Login Page")
+                    Text("login_button")
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.blue)
@@ -127,4 +123,8 @@ struct Features: View {
             
         }
     }
+}
+
+#Preview {
+    ContentView()
 }
