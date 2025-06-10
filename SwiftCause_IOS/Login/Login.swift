@@ -58,7 +58,7 @@ struct Login: View {
                 }
             }
             .navigationDestination(isPresented: $isLoggedIn) {
-                Campaign()
+                
             }
             .alert("Login Error", isPresented: $showAlert) {
                 Button("OK") { }
