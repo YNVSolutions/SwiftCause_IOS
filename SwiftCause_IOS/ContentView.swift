@@ -59,7 +59,6 @@ struct Main: View {
                         .cornerRadius(8)
                         .padding(.horizontal)
                 }
-                NavigationLink(destination: Campaign()) {
                     Text("Campaign Page")
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -68,7 +67,6 @@ struct Main: View {
                         .cornerRadius(8)
                         .padding(.horizontal)
                         .padding(.vertical)
-                }
             }
             .padding(.vertical,150)
             Features()
