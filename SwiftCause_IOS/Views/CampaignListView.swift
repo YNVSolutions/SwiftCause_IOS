@@ -10,12 +10,6 @@ struct CampaignListView: View {
           .font(.largeTitle)
           .fontWeight(.bold)
           .padding(.bottom, 10)
-
-        ForEach(vm.items) { item in
-          DonationRowView(item: item) {
-            vm.donate(to: item)
-          }
-        }
       }
       .padding(.bottom, 20)
     }
