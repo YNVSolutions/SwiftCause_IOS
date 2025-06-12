@@ -1,8 +1,6 @@
 import SwiftUI
-import FirebaseCore
 import FirebaseAuth
-import StripePaymentSheet
-import StripePaymentsUI
+import Firebase
 @main
 struct SwiftCause_IOSApp: App {
     init() {
