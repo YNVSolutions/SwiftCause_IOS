@@ -12,7 +12,6 @@ struct ContentView: View {
             }
         }
         .navigationTitle("Swift Cause")
-        .foregroundColor(.white)
     }
 }
 
@@ -55,18 +54,10 @@ struct Main: View {
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.blue)
-                        .foregroundColor(.white)
                         .cornerRadius(8)
                         .padding(.horizontal)
+                        .foregroundColor(.white)
                 }
-                    Text("Campaign Page")
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                        .padding(.horizontal)
-                        .padding(.vertical)
             }
             .padding(.vertical,150)
             Features()
