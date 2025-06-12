@@ -1,25 +1,43 @@
 import SwiftUI
 
 struct CampaignListView: View {
-  @StateObject private var vm = CampaignListViewModel()
+    @StateObject var campaignViewModel = CampaignListViewModel()
 
-  var body: some View {
-    ScrollView {
-      VStack(spacing: 20) {
-        Text("current_campaigns")
-          .font(.largeTitle)
-          .fontWeight(.bold)
-          .padding(.bottom, 10)
-      }
-      .padding(.bottom, 20)
+    var body: some View {
+        NavigationView {
+            List {
+                if campaignViewModel.campaigns.isEmpty {
+                    Text("No campaigns found!")
+                        .foregroundColor(.gray)
+                } else {
+                    ForEach(campaignViewModel.campaigns) { campaign in
+                        VStack(alignment: .leading) {
+                            Text(campaign.title)
+                                .font(.headline)
+                            Text(campaign.description)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            Text("Starts: \(campaign.startDate, formatter: itemFormatter)")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Campaigns")
+        }
     }
-    .task {
-      await vm.fetchCampaigns()
+
+    private var itemFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
     }
-    .navigationBarTitleDisplayMode(.inline)
-  }
 }
 
-#Preview {
-    CampaignListView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        CampaignListView()
+    }
 }
