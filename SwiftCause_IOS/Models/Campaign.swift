@@ -1,8 +1,10 @@
 import Foundation
+import FirebaseFirestoreCombineSwift
+import FirebaseFirestore
 
-struct DonationItem: Identifiable {
-  let id: UUID
-  let title: String
-  let description: String
-  let amount: String
+struct Campaign: Identifiable, Codable {
+    @DocumentID var id: String?;
+    let title: String
+    let description: String
+    let startDate: Date
 }
