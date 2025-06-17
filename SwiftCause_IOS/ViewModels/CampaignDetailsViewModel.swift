@@ -1,11 +1,10 @@
-import SwiftUI
+import Foundation
+import Combine
 
-struct CampaignDetailsViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class CampaignDetailsViewModel: ObservableObject {
+    let campaign: Campaign
+
+    init(campaign: Campaign) {
+        self.campaign = campaign
     }
-}
-
-#Preview {
-    CampaignDetailsViewModel()
 }
