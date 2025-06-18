@@ -11,15 +11,18 @@ struct CampaignListView: View {
                         .foregroundColor(.gray)
                 } else {
                     ForEach(campaignViewModel.campaigns) { campaign in
-                        VStack(alignment: .leading) {
-                            Text(campaign.title)
-                                .font(.headline)
-                            Text(campaign.description)
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                            Text("Starts: \(campaign.startDate, formatter: itemFormatter)")
-                                .font(.caption)
-                                .foregroundColor(.gray)
+                        NavigationLink(destination: CampaignDetailsView(campaign: campaign)) {
+                            VStack(alignment: .leading) {
+                                Text(campaign.title)
+                                    .font(.headline)
+                                Text(campaign.description)
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                    .lineLimit(1)
+                                Text("Starts: \(campaign.startDate, formatter: itemFormatter)")
+                                    .font(.caption)
+                                    .foregroundColor(.gray)
+                            }
                         }
                     }
                 }
