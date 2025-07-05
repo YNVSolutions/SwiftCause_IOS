@@ -7,4 +7,6 @@ struct Campaign: Identifiable, Codable {
     let title: String
     let description: String
     let startDate: Date
+    let endDate: Date
+    let amount: Double
 }
