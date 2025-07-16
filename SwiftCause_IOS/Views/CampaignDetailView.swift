@@ -65,7 +65,7 @@ struct CampaignDetailsView: View {
                     }
                     
                     Button(action: {
-                        viewModel.donate()
+                        // Handle donation logic here
                     }) {
                         Text("Donate Now")
                             .font(.headline)
@@ -83,5 +83,17 @@ struct CampaignDetailsView: View {
         .background(Color.blue)
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+struct CampaignDetailsView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationStack {
+            CampaignDetailsView(campaign: DonationItem(
+                title: "Sample Campaign",
+                description: "This is a sample campaign description for preview purposes.",
+                amount: "$100"
+            ))
+        }
     }
 }
