@@ -12,12 +12,7 @@ struct CampaignListView: View {
                     .padding(.top)
                 
                 ForEach(viewModel.donationItems) { item in
-                    NavigationLink(destination: CampaignDetailsView(campaign: item)) {
-                        DonationItemView(item: item) {
-                            viewModel.donate(to: item)
-                        }
-                    }
-                    .buttonStyle(PlainButtonStyle())
+                    DonationItemView(item: item)
                 }
             }
             .padding(.bottom, 20)
@@ -29,7 +24,6 @@ struct CampaignListView: View {
 
 struct DonationItemView: View {
     let item: DonationItem
-    var onDonate: () -> Void
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -52,9 +46,7 @@ struct DonationItemView: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    onDonate()
-                }) {
+                NavigationLink(destination: CampaignDetailsView(campaign: item)) {
                     Label("Donate", systemImage: "heart.fill")
                         .font(.body)
                         .padding(.vertical, 8)
@@ -63,7 +55,6 @@ struct DonationItemView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-                .buttonStyle(PlainButtonStyle()) 
             }
         }
         .padding()
@@ -72,5 +63,13 @@ struct DonationItemView: View {
         .cornerRadius(15)
         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
         .padding(.horizontal)
+    }
+}
+
+struct CampaignListView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationStack {
+            CampaignListView()
+        }
     }
 }
