@@ -18,7 +18,7 @@ struct ContentView: View {
 //page1
 struct Main: View {
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 10) {
             VStack{
                 Text("welcome_message")
                     .foregroundColor(.white)
@@ -48,9 +48,18 @@ struct Main: View {
                         .padding()
                         .border(Color.white,width:2)
                 }
-                .padding(.vertical,40)
+                .padding(.vertical,30)
                 NavigationLink(destination: Login()) {
-                    Text("login_button")
+                    Text("Login")
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                        .padding(.horizontal)
+                        .foregroundColor(.white)
+                }
+                NavigationLink(destination: CampaignListView()) {
+                    Text("Campaigns")
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.blue)
@@ -59,7 +68,7 @@ struct Main: View {
                         .foregroundColor(.white)
                 }
             }
-            .padding(.vertical,150)
+            .padding(.vertical,100)
             Features()
         }
         .padding(.vertical,40)

@@ -1,10 +1,9 @@
 import Foundation
-import Combine
 
 class CampaignDetailsViewModel: ObservableObject {
-    let campaign: Campaign
-
-    init(campaign: Campaign) {
+    @Published var campaign: DonationItem
+    
+    init(campaign: DonationItem) {
         self.campaign = campaign
     }
 }
