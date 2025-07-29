@@ -120,7 +120,7 @@ struct CampaignDetailsView: View {
                 .padding(.bottom)
             }
         }
-        .background(Color.blue.ignoresSafeArea())
+        .background(Color("background").ignoresSafeArea())
         .navigationTitle(viewModel.campaign.title)
         .navigationBarTitleDisplayMode(.inline)
     }
