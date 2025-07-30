@@ -1,28 +1,39 @@
 import Foundation
+import FirebaseFirestore
 
-struct DonationItem: Identifiable {
-    let id = UUID()
-    let title: String
+struct DonationItem: Identifiable, Codable {
+    @DocumentID var id: String?
+
+    let collectedAmount: Double
+    let coverImageUrl: String?
+    let createdBy: String
+    let currency: String
     let description: String
-    let amount: String
-}
+    let donationCount: Int
+    let endDate: Date
+    let giftAidEnabled: Bool
+    let goalAmount: Double
+    let lastUpdated: Date
+    let startDate: Date
+    let status: String
+    let tags: [String]
+    let title: String
 
-class CampaignData {
-    static let donationItems: [DonationItem] = [
-        DonationItem(title: "Education for All",
-                    description: "Help provide schooling and learning materials for underprivileged children in rural areas.",
-                    amount: "$500"),
-        DonationItem(title: "Clean Water Initiative",
-                    description: "Fund the construction of new wells and water purification systems in drought-stricken villages.",
-                    amount: "$1,200"),
-        DonationItem(title: "Medical Aid for Seniors",
-                    description: "Support access to essential healthcare, medications, and medical check-ups for elderly citizens.",
-                    amount: "$750"),
-        DonationItem(title: "Animal Shelter Renovation",
-                    description: "Contribute to upgrading facilities and providing better care for rescued animals.",
-                    amount: "$300"),
-        DonationItem(title: "Community Food Drive",
-                    description: "Provide nutritious meals and groceries to families facing food insecurity in urban centers.",
-                    amount: "$250")
-    ]
+    init(id: String? = UUID().uuidString, collectedAmount: Double, coverImageUrl: String? = nil, createdBy: String, currency: String, description: String, donationCount: Int, endDate: Date, giftAidEnabled: Bool, goalAmount: Double, lastUpdated: Date, startDate: Date, status: String, tags: [String], title: String) {
+        self.id = id
+        self.collectedAmount = collectedAmount
+        self.coverImageUrl = coverImageUrl
+        self.createdBy = createdBy
+        self.currency = currency
+        self.description = description
+        self.donationCount = donationCount
+        self.endDate = endDate
+        self.giftAidEnabled = giftAidEnabled
+        self.goalAmount = goalAmount
+        self.lastUpdated = lastUpdated
+        self.startDate = startDate
+        self.status = status
+        self.tags = tags
+        self.title = title
+    }
 }
