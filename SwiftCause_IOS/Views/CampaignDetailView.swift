@@ -11,6 +11,27 @@ struct CampaignDetailsView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
+                HStack {
+                    Text("Welcome User")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                    Spacer()
+                    Button(action: {
+                        Login()
+                    }) {
+                        Text("Logout")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 15)
+                            .padding(.vertical, 8)
+                            .background(Color.red)
+                            .cornerRadius(8)
+                    }
+                }
+                .padding(.horizontal)
+                .padding(.top)
+
                 if let imageUrlString = viewModel.campaign.coverImageUrl, let url = URL(string: imageUrlString) {
                     AsyncImage(url: url) { image in
                         image
@@ -121,7 +142,8 @@ struct CampaignDetailsView: View {
             }
         }
         .background(Color("background").ignoresSafeArea())
-        .navigationTitle(viewModel.campaign.title)
+        .navigationTitle("")
+        .navigationBarHidden(true)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
