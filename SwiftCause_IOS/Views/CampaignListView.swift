@@ -6,6 +6,29 @@ struct CampaignListView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
+                HStack {
+                    Text("Welcome User")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        print("Logout button tapped!")
+                    }) {
+                        Text("Logout")
+                            .font(.body)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 12)
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }
+                }
+                .padding(.horizontal)
+                .padding(.top)
+
                 Text("Current Campaigns")
                     .font(.largeTitle)
                     .fontWeight(.bold)
